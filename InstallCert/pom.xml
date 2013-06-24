@@ -1,0 +1,36 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.tapestrysolutions.atlas.maven.install-cert</groupId>
+  <artifactId>install-cert</artifactId>
+  <version>1-SNAPSHOT</version>
+  <name>InstallCert</name>
+  
+  <build>
+    <plugins>
+        <!-- Use Java 1.6 -->
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>2.5.1</version>
+          <configuration>
+            <source>1.6</source>
+            <target>1.6</target>
+          </configuration>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-jar-plugin</artifactId>
+          <version>2.4</version>
+          <configuration>
+            <archive>
+               <manifest>
+                <addClasspath>true</addClasspath>  
+                <mainClass>InstallCert</mainClass>
+               </manifest>
+            </archive>
+          </configuration>
+        </plugin>
+      </plugins>
+  </build>  
+  
+</project>
